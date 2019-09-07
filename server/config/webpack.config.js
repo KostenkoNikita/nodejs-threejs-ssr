@@ -7,11 +7,14 @@ module.exports = {
         filename: 'server.js'
     },
     mode: 'development',
+    target: 'node',
     module: {
         rules: [
             {
                 test: /\.js(\?.*)?$/,
-                exclude: /(node_modules)/,
+                exclude: [
+                    /(node_modules)/
+                ],
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -21,4 +24,7 @@ module.exports = {
             }
         ],
     },
+    externals: {
+        gl: "commonjs gl"
+    }
 };
