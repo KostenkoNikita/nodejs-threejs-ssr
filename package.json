@@ -1,0 +1,49 @@
+{
+    "name": "nodejs-threejs-ssr",
+    "description": "Node.js server-side Renderer for Three.js",
+    "version": "0.0.1",
+    "private": true,
+    "author": "Neutral Unit",
+    "contributors": [],
+    "scripts": {
+        "build-server": "rm -rf ./server/bin && webpack --mode development --config ./server/config/webpack.config.js",
+        "build-client": "rm -rf ./client/dist && webpack --mode development --config ./client/config/webpack.config.js",
+        "prod-server": "node ./server/bin/server.js",
+        "prod": "npm-run-all build-client build-server prod-server",
+        "nodemon": "nodemon ./server/bin/server.js",
+        "watch:backEnd": "webpack --watch --mode development --config ./server/config/webpack.config.js",
+        "watch:fronEnd": "webpack --watch --mode development --config ./client/config/webpack.config.js",
+        "startAll": "npm-run-all -p nodemon watch:backEnd watch:fronEnd"
+    },
+    "dependencies": {
+        "express": "4.17.1",
+        "gl": "4.3.3",
+        "pngjs": "3.4.0",
+        "react": "16.10.1",
+        "react-dom": "16.10.1",
+        "react-router-dom": "5.1.1",
+        "three": "0.108.0",
+        "uuid": "3.3.3"
+    },
+    "devDependencies": {
+        "@babel/core": "7.6.0",
+        "@babel/preset-env": "7.6.0",
+        "@babel/preset-react": "7.0.0",
+        "@types/express": "4.17.1",
+        "@types/gl": "4.1.0",
+        "@types/uuid": "3.4.5",
+        "babel-loader": "8.0.6",
+        "css-loader": "3.2.0",
+        "html-webpack-plugin": "3.2.0",
+        "less": "3.10.3",
+        "less-loader": "5.0.0",
+        "mini-css-extract-plugin": "0.8.0",
+        "nodemon": "1.19.2",
+        "npm-run-all": "4.1.5",
+        "style-loader": "1.0.0",
+        "uglifyjs-webpack-plugin": "2.2.0",
+        "webpack": "4.39.3",
+        "webpack-cli": "3.3.6"
+    },
+    "keywords": []
+}

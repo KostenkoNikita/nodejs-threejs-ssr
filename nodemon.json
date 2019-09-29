@@ -1,0 +1,7 @@
+{
+    "ignore": [
+        "./server/src",
+        "./server/node_modules",
+        "./client"
+    ]
+}

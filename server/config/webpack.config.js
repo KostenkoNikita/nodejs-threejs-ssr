@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/main.js',
+    entry: './server/src/main.js',
     output: {
         path: path.resolve(__dirname, '../bin'),
         filename: 'server.js'
@@ -13,7 +13,8 @@ module.exports = {
             {
                 test: /\.js(\?.*)?$/,
                 exclude: [
-                    /(node_modules)/
+                    /(node_modules)/,
+                    /(client)/
                 ],
                 use: {
                     loader: 'babel-loader',

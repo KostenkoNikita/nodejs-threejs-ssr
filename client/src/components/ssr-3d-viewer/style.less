@@ -1,0 +1,85 @@
+#ssr-3d-viewer-page-root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    #ssr-3d-viewer-page-header {
+        height: 80px;
+        background-color: red;
+    }
+
+    #ssr-3d-viewer-page-body {
+        flex: 1 1 auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        .load-ssr-3d-image-wrapper {
+            padding: 10px 12px 10px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .ss3-3d-image-message-wrapper {
+                width: 400px;
+                min-height: 400px;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                span {
+                    font-size: 24px;
+                    color: black;
+                    word-wrap: break-word;
+                }
+            }
+            .ss3-3d-image-loading-message-wrapper {
+                .ss3-3d-image-message-wrapper;
+            }
+            .ss3-3d-image-not-loaded-message-wrapper {
+                .ss3-3d-image-message-wrapper;
+            }
+            .ss3-3d-image {
+                width: 400px;
+                height: 400px;
+                user-select: none;
+            }
+            .load-ssr-test-image-button {
+                margin: 15px 0 0 0;
+                min-width: 200px;
+                max-width: 400px;
+                min-height: 40px;
+                cursor: pointer;
+                background-color: rgb(25, 25, 119);
+                border: 1px solid black;
+                &.loading {
+                    background-color: gray;
+                    border-color: darkgray;
+                    cursor: not-allowed;
+                    span {
+                        color: darkgray;
+                    }
+                }
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                span {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: white;
+                    word-wrap: break-word;
+                    user-select: none;
+                }
+            }
+        }
+    }
+
+    #ssr-3d-viewer-page-footer {
+        height: 50px;
+        background-color: #c2dac2;
+    }
+}
