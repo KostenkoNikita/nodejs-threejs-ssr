@@ -16,7 +16,7 @@
         "startAll": "npm-run-all -p nodemon watch:backEnd watch:fronEnd"
     },
     "dependencies": {
-        "express": "4.17.1",
+        "express": "4.17.3",
         "gl": "4.3.3",
         "pngjs": "3.4.0",
         "react": "16.10.1",
